@@ -2,6 +2,7 @@
   height: 100vh;
   width: 100%;
   position: relative;
+  right: 1000px;
 }
 
 .third-sector-text-wrapper {
@@ -13,17 +14,14 @@
 .third-sector-wrapper h1 {
   color: #002841;
   position: relative;
-  right: 1000px;
 }
 
 .third-sector-wrapper p {
-  position: relative;
   margin: 15px;
   color: #494949;
   font-size: 13px;
   line-height: 20px;
   text-align: center;
-  right: 1000px;
 }
 
 .third-sector-image-and-youtube-wrapper {
@@ -68,14 +66,19 @@
 
 .close-youtube-button {
   position: absolute;
-  z-index: 10;
-  left: 85vw;
-  top: 1vh;
+  z-index: 30;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
   color: white;
+  transform: translateY(-150px) translateX(160px);
+  border: none;
+  font-size: 30px;
 }
 
 .close-youtube-button:hover {
   cursor: pointer;
+  color: white;
 }
 
 .play-button-wrapper {
@@ -90,7 +93,18 @@
   background-color: rgba(0, 183, 220, 0.275);
 }
 
-.play-button-wrapper button {
+.play-button-wrapper img{
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  transform: translateX(4px);
+}
+
+.play-button-wrapper-top {
   position: absolute;
   z-index: 10;
   height: 110px;
@@ -100,15 +114,12 @@
   border: none;
   font-size: 80px;
   color: white;
-  transform: rotate(90deg);
 }
 
-.play-button-wrapper button:hover {
-  height: 115px;
-  width: 115px;
-  font-size: 90px;
-  background-color: rgba(0, 183, 220, 0.856);
+
+.play-button-wrapper:hover {
   cursor: pointer;
+  transform: translateY(-3px);
 }
 
 @media only screen and (min-width: 700px) {
@@ -131,19 +142,19 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+
+  .close-youtube-button {
+    transform: translateY(-200px) translateX(350px);
+  }
+
 }
 
 @media only screen and (min-width: 1220px) {
-
   .third-sector-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 700px;
-  }
-
-  .third-sector-wrapper-mobile {
-   height: 100%;
+    height: 800px;
   }
 
   .third-sector-text-wrapper {
@@ -151,7 +162,7 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 40vw;
-    margin-left: 10vw;
+    margin-left: 80px;
   }
 
   .third-sector-text-wrapper h1{
@@ -172,8 +183,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-right: 10vw;
-    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.05);
+    margin-right: 80px;
   }
   
   .third-sector-image-wrapper img {
@@ -198,12 +208,7 @@
   }
 
   .close-youtube-button {
-    position: absolute;
-    z-index: 10;
-    color: white;
-    font-size: 300px;
-    left: 450px;
-    top: 0;
-
+    transform: translateY(-200px) translateX(200px);
   }
+
 }

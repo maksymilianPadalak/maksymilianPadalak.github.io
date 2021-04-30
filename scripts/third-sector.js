@@ -14,7 +14,7 @@ gsap.to(".third-sector-text-wrapper p", {
   x: 1000
 });
 
-const playButton = document.querySelector('.play-button')
+const playButton = document.querySelector('.play-button-wrapper')
 const closeYouTubeButton = document.querySelector(".close-youtube-button")
 const youtubeVideo = document.querySelector('iframe')
 
